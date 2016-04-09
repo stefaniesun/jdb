@@ -20,8 +20,7 @@ public class JobMain {
 	@Autowired
 	private PriceST priceST;
 	
-	@Autowired
-	private OrderST orderST;
+
 	
 	/*@Scheduled(fixedDelay=1*5*1000)
 //	@Scheduled(cron="15 0/2 * * * ?")
@@ -50,9 +49,4 @@ public class JobMain {
 	}
 	
 
-	//30秒推一次订单
-	@Scheduled(fixedDelay=30*1000)
-	public void pushOrderToErp(){
-		orderST.pushOrdertoErp();
-	}
 }
